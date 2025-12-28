@@ -5,6 +5,7 @@ A modern, responsive calculator web application with a beautiful user interface 
 ## Features
 
 - **Basic Arithmetic Operations**: Addition, subtraction, multiplication, and division
+- **Trigonometric Functions**: Calculate sine and cosine (in radians)
 - **Modulo Operation**: Calculate remainders
 - **Decimal Support**: Perform calculations with decimal numbers
 - **Keyboard Support**: Use your keyboard for faster input
@@ -22,6 +23,7 @@ Simply open `index.html` in any modern web browser.
 
 - Click number buttons (0-9) to input numbers
 - Click operator buttons (+, −, ×, ÷, %) to select operations
+- Click **sin** or **cos** to apply trigonometric functions (input is in radians)
 - Click **=** to calculate the result
 - Click **AC** to clear all
 - Click **DEL** to delete the last digit
@@ -65,7 +67,7 @@ Works on all modern browsers including:
 The calculator features:
 - Purple gradient background
 - Clean white calculator interface
-- Color-coded buttons for different operations
+- Color-coded buttons for different operations (green for trigonometric functions)
 - Real-time display of current and previous operands
 
 ## License

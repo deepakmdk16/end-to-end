@@ -48,6 +48,26 @@ class Calculator {
         this.currentOperand = '0';
     }
 
+    applyFunction(func) {
+        const current = parseFloat(this.currentOperand);
+        if (isNaN(current)) return;
+
+        let result;
+        switch (func) {
+            case 'sin':
+                result = Math.sin(current);
+                break;
+            case 'cos':
+                result = Math.cos(current);
+                break;
+            default:
+                return;
+        }
+
+        this.currentOperand = this.roundResult(result).toString();
+        this.shouldResetScreen = true;
+    }
+
     compute() {
         let computation;
         const prev = parseFloat(this.previousOperand);
@@ -143,6 +163,13 @@ document.querySelectorAll('[data-number]').forEach(button => {
 document.querySelectorAll('[data-operator]').forEach(button => {
     button.addEventListener('click', () => {
         calculator.chooseOperation(button.dataset.operator);
+        calculator.updateDisplay();
+    });
+});
+
+document.querySelectorAll('[data-function]').forEach(button => {
+    button.addEventListener('click', () => {
+        calculator.applyFunction(button.dataset.function);
         calculator.updateDisplay();
     });
 });

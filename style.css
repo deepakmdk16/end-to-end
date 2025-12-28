@@ -93,6 +93,16 @@ body {
     background: #e5e5e5;
 }
 
+.btn-function {
+    background: #4caf50;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-function:hover {
+    background: #45a049;
+}
+
 .btn-clear {
     background: #ff6b6b;
     color: #ffffff;
