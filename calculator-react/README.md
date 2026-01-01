@@ -1,4 +1,4 @@
-# Calculator App
+# Calculator App - React
 
 A modern, responsive calculator web application built with React and Vite, featuring a beautiful user interface and full keyboard support.
 
@@ -13,35 +13,29 @@ A modern, responsive calculator web application built with React and Vite, featu
 - **Clean UI**: Modern gradient background with smooth animations
 - **React Hooks**: Built with modern React patterns using custom hooks
 
-## Quick Start
+## Usage
 
 ### Running Locally
 
-1. Navigate to the calculator-react directory:
-```bash
-cd calculator-react
-```
-
-2. Install dependencies:
+1. Install dependencies:
 ```bash
 npm install
 ```
 
-3. Start the development server:
+2. Start the development server:
 ```bash
 npm run dev
 ```
 
-4. Open your browser and visit `http://localhost:5173`
-
-### Building for Production
-
+3. Build for production:
 ```bash
-cd calculator-react
 npm run build
 ```
 
-## Usage
+4. Preview production build:
+```bash
+npm run preview
+```
 
 ### Mouse/Touch Controls
 
@@ -64,28 +58,9 @@ npm run build
 
 ### Tech Stack
 
-- **React 19**: Modern UI library with latest features
-- **Vite**: Next-generation frontend build tool
-- **Custom Hooks**: Clean separation of logic and UI
-
-### Project Structure
-
-```
-calculator-react/
-├── src/
-│   ├── components/
-│   │   ├── Calculator.jsx
-│   │   └── Calculator.css
-│   ├── hooks/
-│   │   └── useCalculator.js
-│   ├── App.jsx
-│   ├── App.css
-│   ├── main.jsx
-│   └── index.css
-├── public/
-├── index.html
-└── package.json
-```
+- **React**: UI library
+- **Vite**: Build tool and development server
+- **Custom Hooks**: For calculator logic and state management
 
 ### Architecture
 
@@ -95,49 +70,23 @@ calculator-react/
 - **Display Management**: Formats numbers with thousands separators
 - **Precision Handling**: Rounds results to prevent floating-point errors
 
-## Docker Deployment
-
-The application can be deployed using Docker with Cloud Run compatibility.
-
-### Building and Running with Docker
-
-```bash
-# Build the Docker image
-docker build -t calculator-app .
-
-# Run with custom port (default is 8080)
-docker run -p 8080:8080 -e PORT=8080 calculator-app
-```
-
-### Dockerfile Features
-
-- Multi-stage build for optimized image size
-- Nginx for efficient static file serving
-- Configurable PORT environment variable (required for Cloud Run)
-- Gzip compression enabled
-- Static asset caching
-
-### Deploying to Google Cloud Run
-
-```bash
-# Build and push to Google Container Registry
-gcloud builds submit --tag gcr.io/PROJECT_ID/calculator-app
-
-# Deploy to Cloud Run
-gcloud run deploy calculator-app \
-  --image gcr.io/PROJECT_ID/calculator-app \
-  --platform managed \
-  --region us-central1 \
-  --allow-unauthenticated
-```
-
-## Browser Compatibility
+### Browser Compatibility
 
 Works on all modern browsers including:
 - Chrome
 - Firefox
 - Safari
 - Edge
+
+## Docker Deployment
+
+The application can be deployed using Docker. A production-ready Dockerfile is included at the root of the repository.
+
+Build and run with Docker:
+```bash
+docker build -t calculator-app .
+docker run -p 8080:8080 -e PORT=8080 calculator-app
+```
 
 ## License
 
