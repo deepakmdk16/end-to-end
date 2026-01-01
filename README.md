@@ -1,6 +1,6 @@
 # Calculator App
 
-A modern, responsive calculator web application with a beautiful user interface and full keyboard support.
+A modern, responsive calculator web application built with React, featuring a beautiful user interface and full keyboard support.
 
 ## Features
 
@@ -11,12 +11,55 @@ A modern, responsive calculator web application with a beautiful user interface 
 - **Responsive Design**: Works seamlessly on desktop and mobile devices
 - **Error Handling**: Prevents division by zero
 - **Clean UI**: Modern gradient background with smooth animations
+- **React-Powered**: Built with React for optimal performance and maintainability
+
+## Getting Started
+
+### Prerequisites
+
+- Node.js (version 18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository
+2. Install dependencies:
+```bash
+npm install
+```
+
+### Development
+
+Run the development server:
+```bash
+npm run dev
+```
+
+The app will be available at `http://localhost:8080`
+
+### Production Build
+
+Build the application for production:
+```bash
+npm run build
+```
+
+Preview the production build:
+```bash
+npm run preview
+```
+
+### Docker Deployment
+
+Build and run using Docker:
+```bash
+docker build -t calculator-app .
+docker run -p 8080:8080 -e PORT=8080 calculator-app
+```
+
+The app will be available at `http://localhost:8080`
 
 ## Usage
-
-### Opening the Calculator
-
-Simply open `index.html` in any modern web browser.
 
 ### Mouse/Touch Controls
 
@@ -37,18 +80,37 @@ Simply open `index.html` in any modern web browser.
 
 ## Technical Details
 
-### Files
+### Tech Stack
 
-- `index.html` - Main HTML structure
-- `style.css` - Styling and responsive design
-- `script.js` - Calculator logic and functionality
+- **React 18**: Modern React with hooks for state management
+- **Vite**: Fast build tool and development server
+- **CSS3**: Custom styling with gradients and animations
+
+### Project Structure
+
+```
+├── src/
+│   ├── components/
+│   │   ├── Calculator.jsx      # Main calculator component
+│   │   └── Calculator.css      # Calculator styles
+│   ├── App.jsx                 # Root component
+│   ├── App.css                 # App styles
+│   ├── main.jsx                # Application entry point
+│   └── index.css               # Global styles
+├── public/                     # Static assets
+├── index.html                  # HTML template
+├── vite.config.js              # Vite configuration
+├── Dockerfile                  # Docker container configuration
+└── package.json                # Project dependencies
+```
 
 ### Architecture
 
-The calculator is built using vanilla JavaScript with an object-oriented approach:
+The calculator is built using React with modern best practices:
 
-- **Calculator Class**: Manages all calculator operations and state
-- **Event Listeners**: Handle user input from buttons and keyboard
+- **React Hooks**: useState and useEffect for state management
+- **Component-Based**: Modular, reusable components
+- **Event Handling**: Keyboard and mouse input support
 - **Display Management**: Formats numbers with thousands separators
 - **Precision Handling**: Rounds results to prevent floating-point errors
 
@@ -60,13 +122,14 @@ Works on all modern browsers including:
 - Safari
 - Edge
 
-## Screenshots
+## Design
 
 The calculator features:
 - Purple gradient background
 - Clean white calculator interface
 - Color-coded buttons for different operations
 - Real-time display of current and previous operands
+- Smooth hover and click animations
 
 ## License
 

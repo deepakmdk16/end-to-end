@@ -1,0 +1,12 @@
+node_modules
+npm-debug.log
+.git
+.gitignore
+README.md
+dist
+.env
+.DS_Store
+*.md
+public/index-old.html
+public/style-old.css
+public/script-old.js
