@@ -1,0 +1,9 @@
+calculator-react/node_modules
+calculator-react/dist
+calculator-react/.git
+.git
+*.md
+.gitignore
+index.html
+script.js
+style.css
